@@ -62,9 +62,9 @@ const Hero = () => {
         {isInView && (
           <motion.div
             className="space-y-5 pt-8"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 2 }}
           >
             <h1 className="font-semibold text-2xl text-headerColor">
               CHARITY HEARTS NIGERIA <br /> AND BROS Limited
@@ -74,11 +74,10 @@ const Hero = () => {
               exceptional Marine Logistics to businesses like yours.
             </p>
             <div className="mt-8">
-              <motion.img
+              <img
                 src={Image1}
                 alt=""
                 className="rounded-2xl"
-                whileHover={{ scale: 1.02 }}
               />
             </div>
             <div className="gap-y-5 pt-5 flex flex-col items-center justify-center pb-6">

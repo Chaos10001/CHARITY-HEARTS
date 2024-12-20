@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt4 } from "react-icons/hi";
+import img1 from "../../asserts/image/logo.png";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,7 @@ const NavBar = () => {
       <nav className=" __navbar_content">
         <div className="flex flex-row justify-between items-center __ar_one_sans space-x-8">
           <div className="flex flex-row items-center gap-x-3">
+            <img src={img1} alt="" className="h-[3rem]" />
             <h1 className="text-primary font-bold text-2xl">CHARITY HEARTS</h1>
           </div>
           <div className="space-x-6">
@@ -35,6 +37,7 @@ const NavBar = () => {
       {/* mobile */}
       <nav className="__navbar_sm_content">
         <div className="flex flex-row items-center gap-x-3">
+          <img src={img1} alt="" className="h-[3rem]" />
           <h1 className="text-primary font-bold text-lg">CHARITY HEARTS</h1>
         </div>
         {isMenuOpen ? (
