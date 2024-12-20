@@ -5,7 +5,7 @@ import Image3 from "../../../asserts/image/Img7.webp";
 const VisionMission = () => {
   return (
     <div >
-      <div className="bg-headerColor md:w-[90%] flex md:flex-row flex-col justify-center items-center rounded-xl space-y-4 pt-5 mx-auto px-[5rem]">
+      <div className="bg-headerColor md:w-[90%] flex md:flex-row flex-col justify-center items-center rounded-xl space-y-4 pt-5 mx-auto px-6 md:px-[5rem]">
         <div className="md:w-1/2">
           <div>
             <div className="space-y-4 ">
@@ -29,7 +29,7 @@ const VisionMission = () => {
             </div>
           </div>
         </div>
-        <div className="md:w-2/3 ">
+        <div className="md:w-2/3 hidden md:block">
           <img src={Image3} alt="" className="mx-auto  md:h-[80vh] pb-6" />
         </div>
       </div>
