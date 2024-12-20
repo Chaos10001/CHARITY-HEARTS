@@ -1,0 +1,98 @@
+import { Link } from "react-router-dom";
+import Logo from "../../asserts/logo.png";
+import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { HiMenuAlt4 } from "react-icons/hi";
+
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <div className="sticky top-0 z-50 bg-white">
+      {/* Main Navbar */}
+      <nav className="__navbar_content">
+        <div className="flex flex-row justify-between items-center __ar_one_sans space-x-8 p-4">
+          <div className="flex flex-row items-center gap-x-3">
+            <img src={Logo} alt="Paypetal Logo" className="h-[2.5rem]" />
+            <h1 className="text-primary font-bold text-2xl">Paypetal</h1>
+          </div>
+
+          <div className="hidden md:flex space-x-6">
+            <Link to="/about">About</Link>
+            <Link to="/">Personal</Link>
+            <Link to="/">Business</Link>
+            <Link to="/">API Integrations</Link>
+            <Link to="/">Pricing</Link>
+          </div>
+
+          <div className="hidden md:block">
+            <button className="bg-primary px-[1.8rem] py-[0.5rem] rounded-full text-white">
+              Download App
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            {isMenuOpen ? (
+              <AiOutlineClose
+                onClick={toggleMenu}
+                className="h-8 w-8 text-primary cursor-pointer"
+              />
+            ) : (
+              <HiMenuAlt4
+                onClick={toggleMenu}
+                className="h-8 w-8 text-primary cursor-pointer"
+              />
+            )}
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden flex flex-col bg-white w-full h-screen absolute top-0 left-0 z-40 p-6">
+          <div className="flex justify-between items-center mb-8">
+            <div className="flex items-center gap-x-3">
+              <img src={Logo} alt="Paypetal Logo" className="h-[2.5rem]" />
+              <h1 className="text-primary font-bold text-2xl">Paypetal</h1>
+            </div>
+            <AiOutlineClose
+              onClick={toggleMenu}
+              className="h-6 w-6 text-black cursor-pointer"
+            />
+          </div>
+
+          <div className="flex flex-col items-start space-y-6">
+            <Link onClick={toggleMenu} className="nav__Links" to="/about">
+              About
+            </Link>
+            <Link onClick={toggleMenu} className="nav__Links" to="/">
+              Personal
+            </Link>
+            <Link onClick={toggleMenu} className="nav__Links" to="/">
+              Business
+            </Link>
+            <Link onClick={toggleMenu} className="nav__Links" to="/">
+              API Integrations
+            </Link>
+            <Link onClick={toggleMenu} className="nav__Links" to="/">
+              Pricing
+            </Link>
+          </div>
+
+          <div className="mt-auto">
+            <button className="bg-primary px-[2rem] py-[0.5rem] rounded-full text-white w-full">
+              Download App
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default NavBar;

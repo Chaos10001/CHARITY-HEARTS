@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NavBar Styles */
+.__navbar_content {
+  @apply hidden md:block bg-headerColor w-[100%] py-4 px-[3rem];
+}
+.__navbar_sm_content {
+  @apply md:hidden flex items-center justify-between p-2 py-4  bg-headerColor;
+}
+.nav__Links {
+  margin: 0 1.2rem;
+  @apply text-black;
+}
+.__hero {
+  background: linear-gradient(to top, #54548f 20%, #05050f 70%);
+  @apply h-[100vh];
+}
+
+.__hero__small {
+  background: linear-gradient(to top, #54548f 20%, #05050f 70%);
+  @apply h-[100%];
+}
+
+@font-face {
+  font-family: AR One Sans;
+  src: url(/AROneSans-Regular.ttf);
+}
+.__ar_one_sans {
+  font-family: AR One Sans;
+}
+@font-face {
+  font-family: Inter;
+  src: url(/Inter_18pt-SemiBold.ttf);
+}
+.__inter {
+  font-family: Inter;
+}
+/* expo file system share from react native  */
