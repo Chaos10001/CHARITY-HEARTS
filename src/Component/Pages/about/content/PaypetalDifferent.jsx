@@ -66,7 +66,7 @@ const Card = ({
 const PaypetalDifferent = () => {
   const ref = useRef(null);
   return (
-    <div ref={ref}>
+    <div id="choose" ref={ref}>
       <h1 className="font-bold md:text-3xl text-2xl text-center mx-8">
         Why Choose Us
       </h1>

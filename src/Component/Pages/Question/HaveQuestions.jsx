@@ -3,7 +3,7 @@ import circle from "../../asserts/image/circle.svg";
 
 const HaveQuestions = () => {
   return (
-    <div className=" pb-6 h-fit pt-[8rem]">
+    <div id="help" className=" pb-6 h-fit pt-[8rem]">
       <h1 className="text-center text-dark text-lg md:text-4xl">
         Have Questions? We&apos;re Here to Help!
       </h1>

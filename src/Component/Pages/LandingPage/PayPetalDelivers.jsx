@@ -10,7 +10,7 @@ const PayPetalDelivers = () => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="pt-[6rem]" ref={ref}>
+    <div id="service" className="pt-[6rem]" ref={ref}>
       <div className="pb-[3rem]">
         <h1 className="font-bold md:text-3xl text-2xl text-center mx-8">
           Our Services/Products

@@ -6,7 +6,8 @@ const JoinTheMovement = () => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="py-[6rem] px-2" ref={ref}>
+    
+    <div id="about" className="py-[6rem] px-2" ref={ref}>
       <div
         className={`bg-headerColor md:w-[90%] h-auto md:h-[60vh] flex flex-col justify-center items-center rounded-xl pt-10 pb-12 mx-auto md:px-[5rem] px-4 ${
           isInView ? "animate-fadeIn" : ""
