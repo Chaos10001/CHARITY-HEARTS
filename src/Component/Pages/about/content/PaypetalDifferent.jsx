@@ -44,12 +44,8 @@ const Card = ({
   bgColor,
   textColor = "text-graytext",
 }) => (
-  <motion.div
+  <div
     className={`${bgColor} relative md:w-[90%] h-[40vh] flex flex-col justify-center items-center rounded-xl p-6 mx-auto`}
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.2 }}
-    transition={{ duration: 0.6 }}
   >
     <h1 className={`font-bold md:text-2xl text-xl text-center ${textColor}`}>
       {title}
@@ -60,7 +56,7 @@ const Card = ({
     <div className="absolute bottom-0 left-[75%]">
       <img src={image} alt={title} className="w-[90%]" />
     </div>
-  </motion.div>
+  </div>
 );
 
 const PaypetalDifferent = () => {
@@ -70,11 +66,17 @@ const PaypetalDifferent = () => {
       <h1 className="font-bold md:text-3xl text-2xl text-center mx-8">
         Why Choose Us
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:mt-[4rem] mt-[2rem] px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:mt-[4rem] mt-[2rem] px-4"
+      >
         {cardData.map((card, index) => (
           <Card key={index} {...card} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

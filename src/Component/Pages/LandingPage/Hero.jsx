@@ -74,24 +74,20 @@ const Hero = () => {
               exceptional Marine Logistics to businesses like yours.
             </p>
             <div className="mt-8">
-              <img
-                src={Image1}
-                alt=""
-                className="rounded-2xl"
-              />
+              <img src={Image1} alt="" className="rounded-2xl" />
             </div>
             <div className="gap-y-5 pt-5 flex flex-col items-center justify-center pb-6">
               <motion.button
                 className="bg-primary px-[5rem] font-semibold py-[0.8rem] rounded-full text-white"
                 whileHover={{ scale: 1.05 }}
               >
-                About Us
+                <a href="#about">About Us</a>
               </motion.button>
               <motion.button
                 className="bg-white px-[5rem] font-semibold py-[0.8rem] rounded-full text-primary"
                 whileHover={{ scale: 1.05 }}
               >
-                Contact Us
+                <a href="#help">Contact Us</a>
               </motion.button>
             </div>
           </motion.div>
