@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Img1 from "../../../asserts/differntnet.png";
 import Img2 from "../../../asserts/differentwallet.png";
 import Img3 from "../../../asserts/differentanalysis.png";
@@ -48,7 +48,7 @@ const Card = ({
     className={`${bgColor} relative md:w-[90%] h-[40vh] flex flex-col justify-center items-center rounded-xl p-6 mx-auto`}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.2 }} // Trigger when 20% of the card is visible
+    viewport={{ once: true, amount: 0.2 }}
     transition={{ duration: 0.6 }}
   >
     <h1 className={`font-bold md:text-2xl text-xl text-center ${textColor}`}>
@@ -66,11 +66,11 @@ const Card = ({
 const PaypetalDifferent = () => {
   const ref = useRef(null);
   return (
-    <div ref={ref} className="pt-[5rem]">
+    <div ref={ref}>
       <h1 className="font-bold md:text-3xl text-2xl text-center mx-8">
         Why Choose Us
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:mt-[4rem] mt-[2rem] px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:mt-[4rem] px-4">
         {cardData.map((card, index) => (
           <Card key={index} {...card} />
         ))}
