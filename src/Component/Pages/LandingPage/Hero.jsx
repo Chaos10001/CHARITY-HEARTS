@@ -58,45 +58,48 @@ const Hero = () => {
       </div>
 
       {/* Mobile */}
-      <div className="md:hidden flex flex-col justify-between mx-auto items-center px-4 __hero__small">
-        {isInView && (
-          <motion.div
-            className="space-y-5 pt-8"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <h1 className="font-semibold text-2xl text-headerColor">
-              CHARITY HEARTS NIGERIA <br /> AND BROS Limited
-            </h1>
-            <p className="__inter text-white text-sm">
-              A leading Marine Logistics company dedicated to providing
-              exceptional Marine Logistics to businesses like yours.
-            </p>
-            <div className="mt-8">
-              <motion.img
-                src={Image1}
-                alt=""
-                className="rounded-2xl"
-                whileHover={{ scale: 1.02 }}
-              />
-            </div>
-            <div className="gap-y-5 pt-5 flex flex-col items-center justify-center pb-6">
-              <motion.button
-                className="bg-primary px-[5rem] font-semibold py-[0.8rem] rounded-full text-white"
-                whileHover={{ scale: 1.05 }}
-              >
-                About Us
-              </motion.button>
-              <motion.button
-                className="bg-white px-[5rem] font-semibold py-[0.8rem] rounded-full text-primary"
-                whileHover={{ scale: 1.05 }}
-              >
-                Contact Us
-              </motion.button>
-            </div>
-          </motion.div>
-        )}
+      <div ref={ref} className="min-h-screen">
+        {console.log("Is in view:", isInView)}
+        <div className="md:hidden flex flex-col justify-between mx-auto items-center px-4 __hero__small">
+          {isInView && (
+            <motion.div
+              className="space-y-5 pt-8"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1 className="font-semibold text-2xl text-headerColor">
+                CHARITY HEARTS NIGERIA <br /> AND BROS Limited
+              </h1>
+              <p className="__inter text-white text-sm">
+                A leading Marine Logistics company dedicated to providing
+                exceptional Marine Logistics to businesses like yours.
+              </p>
+              <div className="mt-8">
+                <motion.img
+                  src={Image1}
+                  alt="Marine Logistics"
+                  className="rounded-2xl"
+                  whileHover={{ scale: 1.02 }}
+                />
+              </div>
+              <div className="gap-y-5 pt-5 flex flex-col items-center justify-center pb-6">
+                <motion.button
+                  className="bg-primary px-[5rem] font-semibold py-[0.8rem] rounded-full text-white"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  About Us
+                </motion.button>
+                <motion.button
+                  className="bg-white px-[5rem] font-semibold py-[0.8rem] rounded-full text-primary"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  Contact Us
+                </motion.button>
+              </div>
+            </motion.div>
+          )}
+        </div>
       </div>
     </div>
   );
