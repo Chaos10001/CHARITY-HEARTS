@@ -70,7 +70,7 @@ const PaypetalDifferent = () => {
       <h1 className="font-bold md:text-3xl text-2xl text-center mx-8">
         Why Choose Us
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:mt-[4rem] px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:mt-[4rem] mt-[2rem] px-4">
         {cardData.map((card, index) => (
           <Card key={index} {...card} />
         ))}
