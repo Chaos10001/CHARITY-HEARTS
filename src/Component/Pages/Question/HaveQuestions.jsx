@@ -27,8 +27,12 @@ const HaveQuestions = () => {
                 <Link style={{ textDecoration: "underline" }}>
                   Phone number
                 </Link>
-                <p className="mt-1">08139148807</p>
-                <p>08032283700</p>
+                <div className="flex flex-col gap-y-1">
+                  <a className="mt-1" href="tel:08032283700">
+                    08139148807
+                  </a>
+                  <a href="tel:08032283700">08032283700</a>
+                </div>
               </div>
               <div>
                 <h1
@@ -37,7 +41,12 @@ const HaveQuestions = () => {
                 >
                   Email address
                 </h1>
-                <p className="md:mt-7">charityhearts@gmail.com</p>
+                <div className="md:mt-7">
+                  <a href="mailto:charityhearts@gmail.com">
+                    charityhearts@gmail.com
+                  </a>
+                </div>
+                <p></p>
               </div>
             </div>
           </div>
