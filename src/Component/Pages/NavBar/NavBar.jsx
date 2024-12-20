@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -20,14 +19,14 @@ const NavBar = () => {
             <h1 className="text-primary font-bold text-2xl">CHARITY HEARTS</h1>
           </div>
           <div className="space-x-6">
-            <Link to="/">About</Link>
-            <Link to="/">Services</Link>
-            <Link to="/">Why Choose Us</Link>
-            <Link to="/">How We Can Help</Link>
+            <a href="#about">About</a>
+            <a href="#service">Services</a>
+            <a href="#choose">Why Choose Us</a>
+            <a href="#help">How We Can Help</a>
           </div>
           <div>
             <button className="bg-primary px-[1.8rem] py-[0.5rem] rounded-full text-white">
-              Contact Us
+              <a href="#help">Contact Us</a>
             </button>
           </div>
         </div>
@@ -62,22 +61,22 @@ const NavBar = () => {
             </div>
 
             <div className="flex flex-col items-start space-y-9 pt-7">
-              <Link onClick={toggleMenu} className="nav__Links" to="/">
+              <a className="nav__Links" onClick={toggleMenu} href="#about">
                 About
-              </Link>
-              <Link onClick={toggleMenu} className="nav__Links" to="/">
+              </a>
+              <a className="nav__Links" onClick={toggleMenu} href="#service">
                 Services
-              </Link>
-              <Link onClick={toggleMenu} className="nav__Links" to="/">
+              </a>
+              <a className="nav__Links" onClick={toggleMenu} href="#choose">
                 Why Choose Us
-              </Link>
-              <Link onClick={toggleMenu} className="nav__Links" to="/">
+              </a>
+              <a className="nav__Links" onClick={toggleMenu} href="#help">
                 How We Can Help
-              </Link>
+              </a>
             </div>
             <div className="text-center pt-[15rem]">
               <button className="bg-primary px-[2rem] py-[0.5rem] rounded-full text-white">
-                Contact Us
+                <a href="#help">Contact Us</a>
               </button>
             </div>
           </div>

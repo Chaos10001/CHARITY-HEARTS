@@ -30,13 +30,13 @@ const Hero = () => {
                   className="bg-primary px-[1.8rem] font-semibold py-[0.8rem] rounded-full text-white"
                   whileHover={{ scale: 1.05 }}
                 >
-                  About Us
+                  <a href="#about">About Us</a>
                 </motion.button>
                 <motion.button
                   className="bg-white px-[1.8rem] font-semibold py-[0.8rem] rounded-full text-primary"
                   whileHover={{ scale: 1.05 }}
                 >
-                  Contact Us
+                  <a href="#help">Contact Us</a>
                 </motion.button>
               </div>
             </motion.div>
