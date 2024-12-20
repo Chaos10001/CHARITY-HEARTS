@@ -14,9 +14,8 @@ const Footer = () => {
           <div>
             <p className="text-footerColor">
               Barge operations in Nigeria is regulated by the Nigeria Ports
-              Authority <br />NPA,
-              NIWA,
-              NIMASA and additionally in Lagos State, LIWA.
+              Authority <br />
+              NPA, NIWA, NIMASA and additionally in Lagos State, LIWA.
             </p>
           </div>
           <div className="flex flex-row space-x-7 pt-7">
